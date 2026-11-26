@@ -35,13 +35,13 @@ import java.util.Random;
 public class TestesSelectionSort {
 
     /** Contador total de verificações executadas na suíte. */
-    private static int totalTestes = 0;
+    public static int totalTestes = 0;
 
     /** Contador de verificações concluídas com sucesso. */
-    private static int sucessos = 0;
+    public static int sucessos = 0;
 
     /** Contador de falhas detectadas. */
-    private static int falhas = 0;
+    public static int falhas = 0;
 
     /**
      * Valida uma asserção e exibe visualmente no console o resultado com indicador formatado.
@@ -49,7 +49,7 @@ public class TestesSelectionSort {
      * @param condicao  resultado booleano da verificação
      * @param descricao texto descritivo do que está sendo testado
      */
-    private static void verificar(boolean condicao, String descricao) {
+    public static void verificar(boolean condicao, String descricao) {
         totalTestes++;
         if (condicao) {
             sucessos++;
@@ -65,7 +65,7 @@ public class TestesSelectionSort {
      *
      * @param titulo texto do título principal
      */
-    private static void imprimirCabecalho(String titulo) {
+    public static void imprimirCabecalho(String titulo) {
         System.out.println("\n================================================================================");
         System.out.println("  " + titulo);
         System.out.println("================================================================================");
@@ -76,7 +76,7 @@ public class TestesSelectionSort {
      *
      * @param titulo identificação do cenário de teste
      */
-    private static void imprimirSecao(String titulo) {
+    public static void imprimirSecao(String titulo) {
         System.out.println("\n--------------------------------------------------------------------------------");
         System.out.println("  " + titulo);
         System.out.println("--------------------------------------------------------------------------------");
@@ -88,7 +88,7 @@ public class TestesSelectionSort {
      * @param alunos vetor de alunos
      * @return true se estiver ordenado de forma crescente, false caso contrário
      */
-    private static boolean estaOrdenadoCrescente(Aluno[] alunos) {
+    public static boolean estaOrdenadoCrescente(Aluno[] alunos) {
         for (int i = 0; i < alunos.length - 1; i++) {
             if (alunos[i].getMatricula() > alunos[i + 1].getMatricula()) {
                 return false;
@@ -103,7 +103,7 @@ public class TestesSelectionSort {
      * @param alunos vetor de alunos
      * @return mapa com chave como linhaOriginal e valor como frequência
      */
-    private static Map<String, Integer> contarOcorrencias(Aluno[] alunos) {
+    public static Map<String, Integer> contarOcorrencias(Aluno[] alunos) {
         Map<String, Integer> mapa = new HashMap<>();
         for (Aluno a : alunos) {
             String chave = a.getLinhaOriginal();
@@ -306,7 +306,7 @@ public class TestesSelectionSort {
     /**
      * Imprime o quadro resumo final com a contagem total de asserções e diagnóstico visual.
      */
-    private static void imprimirResumoFinal(int totalOficial, long tLeitura, Aluno[] oficial) {
+    public static void imprimirResumoFinal(int totalOficial, long tLeitura, Aluno[] oficial) {
         System.out.println("\n================================================================================");
         System.out.println("  RESUMO FINAL DOS TESTES EXECUTADOS");
         System.out.println("================================================================================");
